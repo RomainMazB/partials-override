@@ -1,0 +1,54 @@
+title = "Demonstration"
+url = "/new"
+layout = "default"
+
+[mySecondComponent]
+[mySecondComponent mySecondComponentAlias]
+[Author\Partialsplugin\Components\MySecondComponent mySecondComponentAlias2]
+[Author\Partialsplugin\Components\MySecondComponent mySecondComponentAlias3]
+[Author\Partialsplugin\Components\MySecondComponent mySecondComponentAlias4]
+[Author\Partialsplugin\Components\MySecondComponent mySecondComponentAlias5]
+
+==
+<div class="container">
+    <div class="callout fade in callout-info">
+        <div class="header">
+            <h3>
+                <i class="icon-info"></i>
+                Initial behaviors
+            </h3>
+        </div>
+        <div class="content">
+            <p>This page show the different new behaviors allowed by the PR:.</p>
+            <ul>
+                <li>Override multiple component aliases shared partial with only one file contained into /partials/author/plugin</li>
+                <li>Override one specific component or alias shared partial with one specific file contained into /partials/author/plugin/componentalias</li>
+            </ul>
+        </div>
+    </div>
+
+    <h3>mySecondComponent</h3>
+    <p>I want to override it using the shared partial from the plugins override shared partials</p>
+    {% component 'mySecondComponent' %}
+
+    <h3>mySecondComponentAlias</h3>
+    <p>I want to override it using the shared partial from the component/alias-specific override shared partials</p>
+    {% component 'mySecondComponentAlias' %}
+
+    <h3>mySecondComponentAlias2</h3>
+    <p>I can create multiple alias without the need to create specific folder to override a shared partial</p>
+    {% component 'mySecondComponentAlias2' %}
+
+    <h3>mySecondComponentAlias3</h3>
+    <p>I can create multiple alias without the need to create specific folder to override a shared partial</p>
+    {% component 'mySecondComponentAlias3' %}
+
+    <h3>mySecondComponentAlias4</h3>
+    <p>I can create multiple alias without the need to create specific folder to override a shared partial</p>
+    {% component 'mySecondComponentAlias4' %}
+
+    <h3>mySecondComponentAlias5</h3>
+    <p>I can create multiple alias without the need to create specific folder to override a shared partial</p>
+    {% component 'mySecondComponentAlias5' %}
+
+</div>

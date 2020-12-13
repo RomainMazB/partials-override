@@ -1,0 +1,35 @@
+title = "Demonstration"
+url = "/"
+layout = "default"
+
+[myComponent]
+[myComponent myComponentAlias]
+[Author\Partialsplugin\Components\MyComponent myComponentFullPathAlias]
+
+==
+<div class="container">
+    <div class="callout fade in callout-info">
+        <div class="header">
+            <h3>
+                <i class="icon-info"></i>
+                Initial behaviors
+            </h3>
+        </div>
+        <div class="content">
+            <p>This page only proves that the default behaviors are not altered, the files contained into the /partials/author/ are not used.</p>
+        </div>
+    </div>
+
+    <h3>myComponent</h3>
+    <p>I want to override it from the basic component override</p>
+    {% component 'myComponent' %}
+
+    <h3>myComponentAlias</h3>
+    <p>I want to override it from the basic alias override</p>
+    {% component 'myComponentAlias' %}
+
+    <h3>myComponentFullPathAlias</h3>
+    <p>I want to override it from the basic alias override</p>
+    {% component 'myComponentFullPathAlias' %}
+
+</div>
